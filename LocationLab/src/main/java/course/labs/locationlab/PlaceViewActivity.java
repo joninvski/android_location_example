@@ -141,13 +141,13 @@ public class PlaceViewActivity extends ListActivity implements LocationListener 
 
 	private Location getLastKnownLocation() {
 		List<String> matchingProviders = mLocationManager.getAllProviders();
-		
+
 		for (String provider : matchingProviders) {
-		
+
 			// Note: Uncomment these lines for coursera tests
 			//if (!provider.equals(LocationManager.NETWORK_PROVIDER))
 			//	continue;
-				
+
 			Location location = mLocationManager.getLastKnownLocation(provider);
 
 			if (location != null) {
